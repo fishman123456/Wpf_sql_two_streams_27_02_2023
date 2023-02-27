@@ -1,0 +1,33 @@
+﻿<Window x:Class="Wpf_sql_two_streams_27_02_2023.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_sql_two_streams_27_02_2023"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="300*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="DG_1" Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding}"/>
+        
+        <DataGrid Name="DG_2" Grid.Row="2" Grid.Column="2"  ItemsSource="{Binding}"/>
+        
+        <Button Name="BT_1" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
+                Content="Старт" FontSize="16" Click="BT_1_Click"/>
+        <Label Name="LB_1" Grid.Row="1" Grid.Column="1"   Content="Авторов" 
+               FontSize="16" HorizontalAlignment="Center"/>
+        <Label Name="LB_2" Grid.Row="1" Grid.Column="2"   Content="Список книг " 
+               FontSize="16" HorizontalAlignment="Center"/>
+
+    </Grid>
+</Window>
